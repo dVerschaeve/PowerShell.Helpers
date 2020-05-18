@@ -4,9 +4,10 @@
 Script validates the desired configuration for PowerShell modules
 
 ## DESCRIPTION
-    The script will parse a provided JSON file containing PowerShell module names and the desired version.
-    The Powershell script will install, update or bring the module to a desired version.
-    The script requires a JSON input file with the following format:
+The script will parse a provided JSON file containing PowerShell module names and the desired version.
+The Powershell script will install, update or bring the module to a desired version.
+The script requires a JSON input file with the following format:
+
 ```JSON
     {
         "PsModules" : [
@@ -18,6 +19,7 @@ Script validates the desired configuration for PowerShell modules
 When version 'Latest' is specified, the script will always install the latest version available in the PowerShell gallery.
 
 ## EXAMPLE
+To execute the script, run the following command in PowerShell (Administrative priviliges might be required)
 ```PowerShell
     .\Check-PsModules.ps1 -JSONFile .\MyModules.json
 ```
