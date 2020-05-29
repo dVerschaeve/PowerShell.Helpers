@@ -65,7 +65,7 @@ Function Update-PsModule(){
         [Parameter(Position=1,mandatory=$false)][String]$RequiredVersion = "Latest"
     )
 
-    Uninstall-Module -Name $ModuleName -Force
+    Uninstall-Module -Name $ModuleName -AllVersions -Force
     If($RequiredVersion -ne "Latest"){
         Install-Module -Name $ModuleName -RequiredVersion $Version -Force
     } Else {
@@ -81,32 +81,40 @@ Function Test-PsModule(){
 
     $LocalVersion = Get-InstalledPsModule -ModuleName $ModuleName
     $GalleryVersion = Get-GalleryPSModule -ModuleName $ModuleName
+    
+    Write-Host "Module" $ModuleName": " -NoNewline
 
     If($Null -ne $LocalVersion){
         If($null -ne $GalleryVersion){
             If($Version -eq "Latest"){
                 If($LocalVersion -ne $GalleryVersion){
-                    Write-Host "Module" $ModuleName "-" $LocalVersion " is not up to date to the latest version" $GalleryVersion -ForegroundColor Yellow
+                    Write-Host "version" $LocalVersion " is not up to date to the latest version" $GalleryVersion -ForegroundColor Yellow
                     Update-Module -Name $ModuleName -Force
                 } Else {
-                    Write-Host "Module" $ModuleName "is running the latest version" $GalleryVersion -ForegroundColor Green
+                    Write-Host "running the latest version" $GalleryVersion -ForegroundColor Green
                 }
+            } ElseIf($Version -eq "None"){
+                Write-Host "module not required anymore, removing" -ForegroundColor Yellow
+                Uninstall-Module -Name $ModuleName -AllVersions -Force
             } Else {
                 If($LocalVersion -ne $Version){
-                    Write-Host "Module" $ModuleName "-" $LocalVersion "is not running the desired version" $Version -ForegroundColor Yellow
+                    Write-Host "version" $LocalVersion "is not  the desired version" $Version -ForegroundColor Yellow
                     Update-PsModule -ModuleName $ModuleName -RequiredVersion $Version
                 } Else {
-                    Write-Host "Module" $ModuleName "is running the desired version" $Version -ForegroundColor Green
+                    Write-Host "running the desired version" $Version -ForegroundColor Green
                 }
             }
         } Else {
-            Write-Host "The provide module" $ModuleName "could not be found in the PowerShell gallery!" -ForegroundColor Red
+            Write-Host "could not be found in the PowerShell gallery!" -ForegroundColor Red
         }
     } Else {
-        Write-Host "Module" $ModuleName "not installed. Deploying Module" -ForegroundColor Yellow
         If($Version -eq "Latest"){
+            Write-Host "not installed, deploying Module Version:" $Version -ForegroundColor Yellow
             Install-Module -Name $ModuleName -Force
+        } ElseIf($Version -eq "None"){
+            Write-Host "Module not required" -ForegroundColor Green
         } Else {
+            Write-Host "not installed, deploying Module Version:" $Version -ForegroundColor Yellow
             Install-Module -Name $ModuleName -RequiredVersion $Version -Force
         }
     }

@@ -1,6 +1,7 @@
 {
     "PsModules" : [
         {"Name" : "AzureAD", "Version" : "Latest"},
+        {"Name" : "AzureADPreview", "Version" : "None"},
         {"Name" : "MsOnline", "Version" : "Latest"},
         {"Name" : "ExchangeOnlineManagement", "Version" : "Latest"},
         {"Name" : "AIPService", "Version" : "Latest"},
