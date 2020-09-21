@@ -1,13 +1,14 @@
 {
     "PsModules" : [
-        {"Name" : "AzureAD", "Version" : "Latest"},
-        {"Name" : "AzureADPreview", "Version" : "None"},
+        {"Name" : "AzureAD", "Version" : "None"},
+        {"Name" : "AzureADPreview", "Version" : "Latest"},
         {"Name" : "MsOnline", "Version" : "Latest"},
         {"Name" : "ExchangeOnlineManagement", "Version" : "Latest"},
         {"Name" : "AIPService", "Version" : "Latest"},
         {"Name" : "MicrosoftTeams", "Version" : "Latest"},
         {"Name" : "SharePointPnPPowerShellOnline", "Version" : "Latest"},
         {"Name" : "Microsoft.Online.SharePoint.PowerShell", "Version" : "Latest"},
-        {"Name" : "Microsoft.Graph.Intune", "Version" : "Latest"}
+        {"Name" : "Microsoft.Graph.Intune", "Version" : "Latest"},
+        {"Name" : "Microsoft365DSC", "Version" : "Latest"}
     ]
 }
