@@ -4,6 +4,7 @@
         {"Name" : "AzureADPreview", "Version" : "Latest"},
         {"Name" : "MsOnline", "Version" : "Latest"},
         {"Name" : "ExchangeOnlineManagement", "Version" : "Latest", "AllowPrerelease": "True"},
+        {"Name" : "ORCA", "Version" : "Latest"},
         {"Name" : "AIPService", "Version" : "Latest"},
         {"Name" : "MicrosoftTeams", "Version" : "Latest"},
         {"Name" : "SharePointPnPPowerShellOnline", "Version" : "Latest"},
