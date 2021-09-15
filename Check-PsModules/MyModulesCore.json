@@ -1,0 +1,6 @@
+{
+    "PsModules" : [
+        {"Name" : "Az.Accounts", "Version" : "Latest"},
+        {"Name" : "ExchangeOnlineManagement", "Version" : "Latest", "AllowPrerelease": "True"},
+    ]
+}
