@@ -24,7 +24,7 @@
         },
         {
           "background": "#cf0505",
-          "foreground": "#262b44",
+          "foreground": "#ffffff",
           "properties": {
             "prefix": "  ",
             "style": "folder"
@@ -34,7 +34,7 @@
         },
         {
           "background": "#fee761",
-          "foreground": "#262b44",
+          "foreground": "#ffffff",
           "powerline_symbol": "",
           "properties": {
             "display_stash_count": true,
