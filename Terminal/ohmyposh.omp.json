@@ -9,8 +9,6 @@
         {
           "type": "os",
           "style": "diamond",
-          "leading_diamond": "",
-
           "foreground": "#26C6DA",
           "background": "#546E7A",
           "properties": {}
