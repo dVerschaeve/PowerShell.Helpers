@@ -10,17 +10,31 @@
           "type": "os",
           "style": "diamond",
           "leading_diamond": "",
+
           "foreground": "#26C6DA",
           "background": "#546E7A",
           "properties": {}
         },
         {
+          "type": "envvar",
+          "style": "diamond",
+          "powerline_symbol": "",
+          "foreground": "#ffffff",
+          "background": "#0077c2",
+          "properties": {
+            "var_name": "OHMYPWSH",
+            "prefix": " PS "
+          }
+        },
+        {
           "background": "#0aac2d",
           "foreground": "#262b44",
           "powerline_symbol": "",
-          "trailing_diamond": "",
           "style": "powerline",
-          "type": "root"
+          "type": "root",
+          "properties" : {
+            "root_icon": "\uf50a"
+          }
         },
         {
           "background": "#cf0505",
@@ -29,7 +43,8 @@
             "prefix": "  ",
             "style": "folder"
           },
-          "style": "diamond",
+          "style": "powerline",
+          "powerline_symbol": "",
           "type": "path"
         },
         {
@@ -65,14 +80,14 @@
           }
         },
         {
-          "background": "#0095e9",
+          "background": "#0aac2d",
           "foreground": "#ffffff",
           "properties": {
             "always_enabled": true,
             "color_background": true,
             "display_exit_code": false,
             "error_color": "#ff0044",
-            "prefix": " "
+            "prefix": " \ue23a"
           },
           "style": "diamond",
           "trailing_diamond": "",
