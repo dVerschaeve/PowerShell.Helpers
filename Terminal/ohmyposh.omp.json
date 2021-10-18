@@ -87,7 +87,7 @@
             "color_background": true,
             "display_exit_code": false,
             "error_color": "#ff0044",
-            "prefix": " \ue23a"
+            "prefix": " \uf046"
           },
           "style": "diamond",
           "trailing_diamond": "",
